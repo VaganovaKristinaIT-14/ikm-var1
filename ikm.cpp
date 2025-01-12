@@ -6,7 +6,7 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL,"RU");
 	string a, b, c;
-	cout << "Введите числа А,В,С (числа более 20 знаков) через пробел " << endl;
+	cout << "Введите числа А,В,С для подсчёта выражения А+2*В-С (числа более 20 знаков) через пробел " << endl;
 	cin >> a >> b >> c;
 	int cnt=0; //счетчик проверок
 	while (cnt != 4) {
@@ -42,7 +42,7 @@ int main() {
 
 	//2*b
 	b = mult(b);
-	cout << b << " 2b " << endl;
+	
 	//а+2b
 	int lena = a.size(), lenb = b.size(), lenc = c.size();
 	//добавляем 0 слева к меньшей строке
@@ -59,7 +59,7 @@ int main() {
 	massiv(masa, a, len, part);//делим на блоки
 	massiv(masb, b, len, part);
 	string ressum = sumnum(masa, masb, part); //считаем результат
-	cout << ressum << " a+2b " << endl;
+	
 
 	//Вычитание С
 	len = ressum.size();
@@ -103,6 +103,6 @@ int main() {
 		fin = dif(masc,masres, masfin, part);
 	if (k == 2) 
 		cout <<"-";
-	cout <<fin;
+	cout << "A+2*B-C = " <<fin;
 return 0;
 }
