@@ -103,6 +103,9 @@ int main() {
 		fin = dif(masc,masres, masfin, part);
 	if (k == 2) 
 		cout <<"-";
+	if (!isnum(fin)) {
+	cout << "0";
+}
 	cout << "A+2*B-C = " <<fin;
 return 0;
 }
